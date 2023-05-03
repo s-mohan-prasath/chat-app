@@ -4,7 +4,8 @@
   "description": "This is a chat app",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "node server.js"
   },
   "author": "Mohan Prasath S",
   "license": "ISC",
