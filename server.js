@@ -5,7 +5,6 @@ const io = require("socket.io")(http);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
-  console.log("Hello");
 });
 
 io.on("connection", (socket) => {
@@ -20,7 +19,7 @@ io.on("connection", (socket) => {
     io.emit("chat message", msg);
   });
 });
-const PORT = 3000;
-http.listen(PORT, () => {
-  console.log(`listening on ${PORT}`);
+const port = process.env.PORT || 3000;
+http.listen(port, () => {
+  console.log(`listening on ${port}`);
 });
